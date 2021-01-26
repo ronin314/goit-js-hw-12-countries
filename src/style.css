@@ -10,8 +10,15 @@ body {
   width: 100%;
   max-width: 1400px;
 }
+.input-title {
+  margin: 0;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+}
 .input {
   margin: 20px;
+  margin-top: 0;
   width: 50%;
   height: 50px;
   font-size: 36px;
@@ -42,6 +49,4 @@ body {
 }
 .item-parameter {
   font-weight: bold;
-}
-.item-value {
 }

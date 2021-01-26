@@ -1,7 +1,7 @@
 import refs from './refs';
 import fetchCountries from './fetch-countries';
 import updateMarkup from './templating';
-const debounce = require('lodash.debounce');
+import debounce from 'lodash.debounce';
 
 refs.inputRef.addEventListener(
   'input',
@@ -9,6 +9,9 @@ refs.inputRef.addEventListener(
     event.preventDefault();
     refs.country.innerHTML = '';
     const inputValue = refs.inputRef.value;
+    if (!inputValue) {
+      return;
+    }
     fetchCountries(inputValue).then(data => updateMarkup(data));
   }, 500),
 );

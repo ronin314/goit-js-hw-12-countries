@@ -17,6 +17,11 @@ const advices = {
       text: 'Пожалуйста, проверьте введенную информацию',
     });
   },
+  onError() {
+    PNotify.notice({
+      title: 'Произошла ошибка',
+    });
+  },
 };
 
 export default advices;
